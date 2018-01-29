@@ -376,7 +376,7 @@ void loop() {
       Serial.print(pressure, 2);  
       Serial.println(" mbar");// pressure in millibar
 
-#if 1
+#if 1 
       altitude = 145366.45f*(1.0f - pow((pressure/1013.25f), 0.190284f));
       Serial.print("Altitude = "); 
       Serial.print(altitude, 2); 
