@@ -25,20 +25,6 @@ Removed Member From Class: ClassName=03_USB_TO_UART Member=R8
 Removed Member From Class: ClassName=03_USB_TO_UART Member=U2
 Removed Member From Class: ClassName=03_USB_TO_UART Member=VT1
 Removed Member From Class: ClassName=03_USB_TO_UART Member=VT2
-Change Component Footprint: Designator=C8 Old Footprint=SMT_C_0402 New Footprint=SMT_C_0603
-Change Component Footprint: Designator=R1 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R2 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R3 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R4 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R5 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R9 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R10 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R11 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R12 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R13 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Footprint: Designator=R14 Old Footprint=SMT_R_0402 New Footprint=SMT_R_0603
-Change Component Description : Designator=S1 Old Description=SMT Tactile ?Switch PTS 820 Series New Description=SMT Tactile ?Switch PTS 820 Series
-Change Component Description : Designator=S2 Old Description=SMT Tactile ?Switch PTS 820 Series New Description=SMT Tactile ?Switch PTS 820 Series
 Added Room: Name=02_ESP12_CORE
 Added Room: Name=03_USB_TO_UART
 Added Room: Name=04_POWER

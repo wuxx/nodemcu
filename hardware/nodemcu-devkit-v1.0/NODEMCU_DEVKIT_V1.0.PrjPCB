@@ -173,23 +173,6 @@ GenerateClassCluster=0
 DocumentUniqueId=MHSQQBSA
 
 [Document9]
-DocumentPath=NODEMCU_DEVKIT_V1.0.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=BNXOLFNW
-
-[Document10]
 DocumentPath=NODEMCU_DEVKIT_V1.0.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -204,7 +187,24 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=JACOHMRN
+DocumentUniqueId=IQAMOWSU
+
+[Document10]
+DocumentPath=NODEMCU_DEVKIT_V1.0.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=XPKFTVGP
 
 [Configuration1]
 Name=Default Configuration
