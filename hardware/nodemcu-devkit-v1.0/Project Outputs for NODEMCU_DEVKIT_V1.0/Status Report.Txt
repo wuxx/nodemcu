@@ -1,0 +1,14 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [NODEMCU_DEVKIT_V1.0.PrjPCB]
+   Generated File[NODEMCU_DEVKIT_V1.0-RoundHoles-Plated.TXT]
+   Generated File[NODEMCU_DEVKIT_V1.0-RoundHoles-NonPlated.TXT]
+   Generated File[NODEMCU_DEVKIT_V1.0-SlotHoles-Plated.TXT]
+   Generated File[NODEMCU_DEVKIT_V1.0.LDP]
+   Generated File[NODEMCU_DEVKIT_V1.0.DRR]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 0:29:15 On 2018/1/31

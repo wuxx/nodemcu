@@ -12,8 +12,11 @@ char i2c_dev[I2C_DISPLAY_DEVICE][32]; // Array on string displayed
 #define LED_PIN   16
 
 // I2C Pins Settings
-#define SDA_PIN   5
-#define SDC_PIN   4
+//#define SDA_PIN   5
+//#define SDC_PIN   4
+
+#define SDA_PIN   12
+#define SDC_PIN   14
 
 /* ======================================================================
   Function: i2cScan
@@ -111,9 +114,9 @@ void setup() {
   Wire.begin(SDA_PIN, SDC_PIN);
   ina219.begin();
   // To use a slightly lower 32V, 1A range (higher precision on amps):
-  //ina219.setCalibration_32V_1A();
+  ina219.setCalibration_32V_1A();
   // Or to use a lower 16V, 400mA range (higher precision on volts and amps):
-  ina219.setCalibration_16V_400mA();
+  //ina219.setCalibration_16V_400mA();
   i2c_scan();
 
   delay(1000); 
@@ -121,7 +124,8 @@ void setup() {
 }
 
 void loop() {
-  uint8_t count = 5;
+#if 1
+  uint8_t count = 30;
 
   // put your main code here, to run repeatedly:
   while (count --) {
@@ -130,6 +134,7 @@ void loop() {
     digitalWrite(LED_PIN, LOW);
     delay(1000);
   }
+#endif
   
   float shuntvoltage = 0;
   float busvoltage = 0;
@@ -142,13 +147,16 @@ void loop() {
   current_mA = ina219.getCurrent_mA();
   power_mW = ina219.getPower_mW();
   loadvoltage = busvoltage + (shuntvoltage / 1000);
-  
+
+#if 0
   Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
   Serial.print("Shunt Voltage: "); Serial.print(shuntvoltage); Serial.println(" mV");
   Serial.print("Load Voltage:  "); Serial.print(loadvoltage); Serial.println(" V");
   Serial.print("Current:       "); Serial.print(current_mA); Serial.println(" mA");
   Serial.print("Power:         "); Serial.print(power_mW); Serial.println(" mW");
   Serial.println("");
+#endif
 
-delay(2000);
+  Serial.print(current_mA);
+  Serial.println("");
 }

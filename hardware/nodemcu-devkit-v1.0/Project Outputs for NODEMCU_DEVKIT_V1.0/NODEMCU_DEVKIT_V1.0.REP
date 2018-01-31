@@ -1,0 +1,36 @@
+*************************************************************
+FileName = NODEMCU_DEVKIT_V1.0.GBR
+AutoAperture = True
+*************************************************************
+Generating : Drill Drawing
+      File : NODEMCU_DEVKIT_V1.0.GD1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+    D14
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : NODEMCU_DEVKIT_V1.0.GG1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D11
+*************************************************************
+
