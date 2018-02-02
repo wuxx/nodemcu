@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=C1 Old Footprint=SMT_C_0402 New Footprint=SMT_C_0603
+Added Room: Name=02_ESP12_CORE
+Added Room: Name=03_USB_TO_UART
+Added Room: Name=04_POWER
+Added Room: Name=05_IO_CONN
+Added Room: Name=06_KEY
+Added Room: Name=07_ADC

@@ -1,4 +1,5 @@
 #include <Wire.h>
+#include <Adafruit_ssd1306syp.h>
 
 /*most of these code stolen from https://github.com/kriswiner/ESP8266/blob/master/BMP280_ESP8266.ino */
 
@@ -11,11 +12,13 @@ char i2c_dev[I2C_DISPLAY_DEVICE][32]; // Array on string displayed
 #if 1
 // I2C Pins Settings
 #define SDA_PIN   5
-#define SDC_PIN   4
+#define SCL_PIN   4
 #else
 #define SDA_PIN   0
-#define SDC_PIN   2
+#define SCL_PIN   2
 #endif
+
+Adafruit_ssd1306syp display(SDA_PIN, SCL_PIN);
 
 /* ======================================================================
   Function: i2cScan
@@ -108,21 +111,30 @@ void setup() {
   Serial.print("ESP8266 flash chip speed = "); Serial.print(flashChipSpeed); Serial.println(" Hz");
   uint32_t getVcc = ESP.getVcc();
   Serial.print("ESP8266 supply voltage = "); Serial.print(getVcc); Serial.println(" volts");
-  delay(4000); // give some time to read the screen
+  delay(1000); // give some time to read the screen
 
   
-  Wire.begin(SDA_PIN, SDC_PIN);
+
   i2c_scan();
 #if 0
+  Wire.begin(SDA_PIN, SCL_PIN);
   pinMode(SDA_PIN, OUTPUT);
-  pinMode(SDC_PIN, OUTPUT);
+  pinMode(SCL_PIN, OUTPUT);
   
   digitalWrite(SDA_PIN, HIGH);
-  digitalWrite(SDC_PIN, LOW);
+  digitalWrite(SCL_PIN, LOW);
 #endif
   delay(1000); 
 
-}
+  display.initialize();//oled初始化
+
+  display.setTextColor(WHITE);//设置oled文字颜色
+  display.setTextSize(2);//设置oled文字大小
+  display.setCursor(0, 24); //设置oled指针位置
+  display.print("Hello!");//oled显示文字
+  display.update();
+  
+} 
 
 void loop() {
   uint8_t count = 5;
