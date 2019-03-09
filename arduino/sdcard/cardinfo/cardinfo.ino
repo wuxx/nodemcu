@@ -101,14 +101,40 @@ void setup()
   volumesize /= 1024;
   Serial.println(volumesize);
 
-
+#if 0
   Serial.println("\nFiles found on the card (name, date and size in bytes): ");
   root.openRoot(volume);
 
   // list all files in the card with date and size
   root.ls(LS_R | LS_DATE | LS_SIZE);
-}
+#endif
 
+  Serial.print("Initializing SD card...");
+
+  // see if the card is present and can be initialized:
+  if (!SD.begin(chipSelect)) {
+    Serial.println("Card failed, or not present");
+    // don't do anything more:
+    return;
+  }
+  Serial.println("card initialized.");
+
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
+  File dataFile = SD.open("TEST.TXT");
+
+  // if the file is available, write to it:
+  if (dataFile) {
+    while (dataFile.available()) {
+      Serial.write(dataFile.read());
+    }
+    dataFile.close();
+  }
+  // if the file isn't open, pop up an error:
+  else {
+    Serial.println("error opening TEST.TXT");
+  }
+}
 
 void loop(void) {
 
